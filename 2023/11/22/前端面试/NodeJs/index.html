@@ -1,0 +1,231 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>面试01-NodeJs | Charlotte的个人博客</title><meta name="author" content="Charlotte"><meta name="copyright" content="Charlotte"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="前端面试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试01-NodeJs">
+<meta property="og:url" content="http://example.com/2023/11/22/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/NodeJs/index.html">
+<meta property="og:site_name" content="Charlotte的个人博客">
+<meta property="og:description" content="前端面试">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg">
+<meta property="article:published_time" content="2023-11-21T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-12-10T02:07:21.993Z">
+<meta property="article:author" content="Charlotte">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/11/22/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/NodeJs/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta/><meta/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":null,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":300},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Charlotte","link":"链接: ","source":"来源: Charlotte的个人博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: ,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '面试01-NodeJs',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: true,
+  postUpdate: '2023-12-10 10:07:21'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load',() => { preloader.endLoading() })
+
+  if (false) {
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+  }
+})()</script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/img.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-archive"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Charlotte的个人博客"><span class="site-name">Charlotte的个人博客</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-archive"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">面试01-NodeJs<a class="post-edit-link" href="null_posts/前端面试/NodeJs.md" title="编辑" target="_blank"><i class="fas fa-pencil-alt"></i></a></h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-11-21T16:00:00.000Z" title="发表于 2023-11-22 00:00:00">2023-11-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-12-10T02:07:21.993Z" title="更新于 2023-12-10 10:07:21">2023-12-10</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/">前端面试</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="面试01-NodeJs"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="post-content" id="article-container"><h1 id="对Buffer的理解"><a href="#对Buffer的理解" class="headerlink" title="对Buffer的理解"></a>对Buffer的理解</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>Node应用中，处理网络协议、操作数据库、处理图片、接受上传文件等，在网络流和文件的操作中，要处理大量的二进制数据，而Buffer就是在内存中开辟一片区域，用来存放二进制数据</p>
+<p>上面的操作中都会存放数据流动，每个数据流动的工程中，都有一个最小或最大的数据量。</p>
+<p>如果数据到达的速度比进程消耗的速度快，那么少数早到达的数据会处于等待区等候被处理。反之，如果数据到达的速度比进程消耗的数据慢，那么早先到达的数据需要等待一定量的数据到达之后才能被处理</p>
+<p>这里的等待区就是缓冲区(Buffer),Nodejs不能控制数据传输速度和时间，只能决定何时发送数据，如果还没到发送的时间，则将数据放在Buffer中。<br><img src="/img_8.png" alt="img_8.png"><br>我的理解:就是一个存放二进制的一个区域</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>创建Buffer方法</p>
+<p>Buffer.from()</p>
+<p>Buffer.alloc()</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Buffer</span>.<span class="title function_">alloc</span>(<span class="number">10</span>)<span class="comment">//创建一个大小为10个字节的缓冲区</span></span><br><span class="line"><span class="title class_">Buffer</span>.<span class="title function_">alloc</span>(<span class="number">10</span>,<span class="number">1</span>)<span class="comment">//创建一个长度为10的Buffer，其中全部填充了值&#x27;1&#x27;的字节</span></span><br><span class="line"><span class="keyword">const</span> buffer = <span class="title class_">Buffer</span>.<span class="title function_">from</span>(<span class="string">&#x27;hello&#x27;</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(buffer.<span class="title function_">toString</span>())</span><br></pre></td></tr></table></figure>
+<ol>
+<li>编码和解码不是相同的格式则会出现乱码的情况</li>
+<li>设定的范围导致字符串被截断的时候，也会出现乱码</li>
+</ol>
+<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>I&#x2F;O操作</p>
+<p>加密解密</p>
+<p>zlib.js(提供压缩和解压功能)</p>
+<h1 id="对Node中Stream的理解-应用场景"><a href="#对Node中Stream的理解-应用场景" class="headerlink" title="对Node中Stream的理解?应用场景?"></a>对Node中Stream的理解?应用场景?</h1><p>流，是有顺序的，逐块读取数据、处理内容，用于顺序读取输入或写入输出</p>
+<p>会以Buffer为单位，流分为3部分:source、dest、pipe<br><img src="/img_9.png" alt="img_9.png"><br>在NodeJs中HTTP服务模块中，request为可读流，response为可写流</p>
+<h1 id="nodejs模块的导入与导出以及es6区别"><a href="#nodejs模块的导入与导出以及es6区别" class="headerlink" title="nodejs模块的导入与导出以及es6区别"></a>nodejs模块的导入与导出以及es6区别</h1><h2 id="node模块化导入和导出"><a href="#node模块化导入和导出" class="headerlink" title="node模块化导入和导出"></a>node模块化导入和导出</h2><p>导出的模块：两种方式<br>module.exports &#x3D; { }<br>exports.key &#x3D; value<br>两种方式的区别：<br>module.exports 导出的是一个对象 ； 一个文件中只能使用一次 ; 导入模块同样可以使用对象解构形式</p>
+<p>exports 导出的是一个具体的值 ； 一个文件中可以出现多次 ; exports 可以导出多个模块，当我们引入模块式，会得到一个对象集合 { fun: [Function], test: [Function], num: ‘hello world’ } 可以使用对象解构的形式获取具体的模块</p>
+<p>导入：<br>nodejs 遵循的是 CommonJs 的规范</p>
+<p>导入模块： 统一使用 require(url) 导入模块</p>
+<h2 id="es6模块化导入和导出"><a href="#es6模块化导入和导出" class="headerlink" title="es6模块化导入和导出"></a>es6模块化导入和导出</h2><p>重点 和 es6 的模块导入和导出区分</p>
+<p>es6模块化：</p>
+<ul>
+<li>导出模块</li>
+</ul>
+<ol>
+<li><p>单独导出： export let num &#x3D; 100;</p>
+</li>
+<li><p>整体导出：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">fun</span>(<span class="params"></span>)&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"> <span class="keyword">const</span> num = <span class="number">100</span>;  </span><br><span class="line"> <span class="keyword">export</span> &#123;</span><br><span class="line">     fun,</span><br><span class="line">     num</span><br><span class="line"> &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li><p>导出默认模块</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> str = <span class="string">&#x27;hello&#x27;</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> str;</span><br><span class="line">或者</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span>(<span class="params"></span>)&#123;&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">fun</span>(<span class="params"></span>)&#123;&#125;</span><br><span class="line">导出模块可以命名别名</span><br><span class="line"><span class="keyword">export</span> &#123;</span><br><span class="line">    num <span class="keyword">as</span> n,</span><br><span class="line">    fun <span class="keyword">as</span> f</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ol>
+<ul>
+<li>导入模块<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">导入普通模块 : import &#123;解构&#125; from &#x27;url&#x27; </span><br><span class="line">导入默认模块  import 变量名 from &#x27;url&#x27; </span><br><span class="line">两者结合：  import 变量名,&#123;解构&#125; from &#x27;url&#x27; </span><br><span class="line">导入命名别名： import &#123;解构 as 别名&#125; from &#x27;url&#x27; </span><br><span class="line">整体导入： import * as 别名 from &#x27;url&#x27;  如果里边有默认模块，通过 `别名.default` 使用 , 其他模块 `别名.模块名` 使用</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h1 id="对中间件概念的理解，如何封装node中间件"><a href="#对中间件概念的理解，如何封装node中间件" class="headerlink" title="对中间件概念的理解，如何封装node中间件"></a>对中间件概念的理解，如何封装node中间件</h1><p><img src="/img_10.png" alt="img_10.png"><br>在实现中间件时候，单个中间件应该足够简单，职责单一，中间件的代码编写应该高效， 必要的时候通 过缓存重复获取数据。</p>
+<p>koa本身比较简洁，但是通过中间件的机制能够实现各种所需要的功能，使得 web应用具备良好的可 拓展性和组合性 通过将公共逻辑的处理编写在中间件中，可以不用在每一个接口回调中做相同的代码编写，减少了冗杂<br>代码，过程就如装饰者模式</p>
+<p>例如:<br><code>koa-bodyparse</code>:就是将我们的post请求和表单提交的查询字符串转化为对象并挂载在ctx.request.body上</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// my-koa-bodyparser.js</span></span><br><span class="line"><span class="keyword">const</span> querystring = <span class="built_in">require</span>(<span class="string">&quot;querystring&quot;</span>);</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = <span class="keyword">function</span> <span class="title function_">bodyParser</span>(<span class="params"></span>) &#123;</span><br><span class="line"> <span class="keyword">return</span> <span class="keyword">async</span> (ctx, next) =&gt; &#123;</span><br><span class="line"> <span class="keyword">await</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line"> <span class="keyword">let</span> dataArr = [];</span><br><span class="line"> ctx.<span class="property">req</span>.<span class="title function_">on</span>(<span class="string">&quot;data&quot;</span>, <span class="function"><span class="params">data</span> =&gt;</span> dataArr.<span class="title function_">push</span>(data));</span><br><span class="line"> ctx.<span class="property">req</span>.<span class="title function_">on</span>(<span class="string">&quot;end&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line"> <span class="keyword">let</span> contentType = ctx.<span class="title function_">get</span>(<span class="string">&quot;Content-Type&quot;</span>);</span><br><span class="line"> <span class="keyword">let</span> data = <span class="title class_">Buffer</span>.<span class="title function_">concat</span>(dataArr).<span class="title function_">toString</span>();</span><br><span class="line"> <span class="keyword">if</span> (contentType === <span class="string">&quot;application/x-www-form-urlencoded&quot;</span>) &#123;</span><br><span class="line"></span><br><span class="line"> ctx.<span class="property">request</span>.<span class="property">body</span> = querystring.<span class="title function_">parse</span>(data);</span><br><span class="line"> &#125; <span class="keyword">else</span> <span class="keyword">if</span> (contentType === <span class="string">&quot;applaction/json&quot;</span>) &#123;</span><br><span class="line">     </span><br><span class="line"> ctx.<span class="property">request</span>.<span class="property">body</span> = <span class="title class_">JSON</span>.<span class="title function_">parse</span>(data);</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="title function_">resolve</span>();</span><br><span class="line"> &#125;);</span><br><span class="line"> &#125;);</span><br><span class="line"> <span class="keyword">await</span> <span class="title function_">next</span>();</span><br><span class="line"> &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">Charlotte</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/11/22/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/NodeJs/">http://example.com/2023/11/22/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/NodeJs/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">Charlotte的个人博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/11/22/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/1.%E4%B8%89%E4%BB%B6%E5%A5%97/" title="面试01-三件套篇"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">面试01-三件套篇</div></div></a></div><div class="next-post pull-right"><a href="/2023/10/04/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/01react/" title="React"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">React</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/img.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Charlotte</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AF%B9Buffer%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-number">1.</span> <span class="toc-text">对Buffer的理解</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.1.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95"><span class="toc-number">1.2.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">1.3.</span> <span class="toc-text">应用场景</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AF%B9Node%E4%B8%ADStream%E7%9A%84%E7%90%86%E8%A7%A3-%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">2.</span> <span class="toc-text">对Node中Stream的理解?应用场景?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#nodejs%E6%A8%A1%E5%9D%97%E7%9A%84%E5%AF%BC%E5%85%A5%E4%B8%8E%E5%AF%BC%E5%87%BA%E4%BB%A5%E5%8F%8Aes6%E5%8C%BA%E5%88%AB"><span class="toc-number">3.</span> <span class="toc-text">nodejs模块的导入与导出以及es6区别</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#node%E6%A8%A1%E5%9D%97%E5%8C%96%E5%AF%BC%E5%85%A5%E5%92%8C%E5%AF%BC%E5%87%BA"><span class="toc-number">3.1.</span> <span class="toc-text">node模块化导入和导出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#es6%E6%A8%A1%E5%9D%97%E5%8C%96%E5%AF%BC%E5%85%A5%E5%92%8C%E5%AF%BC%E5%87%BA"><span class="toc-number">3.2.</span> <span class="toc-text">es6模块化导入和导出</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AF%B9%E4%B8%AD%E9%97%B4%E4%BB%B6%E6%A6%82%E5%BF%B5%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%8C%E5%A6%82%E4%BD%95%E5%B0%81%E8%A3%85node%E4%B8%AD%E9%97%B4%E4%BB%B6"><span class="toc-number">4.</span> <span class="toc-text">对中间件概念的理解，如何封装node中间件</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/09/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="面试02-计算机网络">面试02-计算机网络</a><time datetime="2023-12-08T16:00:00.000Z" title="发表于 2023-12-09 00:00:00">2023-12-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/22/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/1.%E4%B8%89%E4%BB%B6%E5%A5%97/" title="面试01-三件套篇">面试01-三件套篇</a><time datetime="2023-11-21T16:00:00.000Z" title="发表于 2023-11-22 00:00:00">2023-11-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/22/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/NodeJs/" title="面试01-NodeJs">面试01-NodeJs</a><time datetime="2023-11-21T16:00:00.000Z" title="发表于 2023-11-22 00:00:00">2023-11-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/10/04/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/01react/" title="React">React</a><time datetime="2023-10-03T16:00:00.000Z" title="发表于 2023-10-04 00:00:00">2023-10-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/10/01/%E5%89%8D%E7%AB%AF%E7%9A%84%E5%B7%A5%E7%A8%8B%E5%8C%96/Git/" title="Git 和 Github的使用">Git 和 Github的使用</a><time datetime="2023-09-30T16:00:00.000Z" title="发表于 2023-10-01 00:00:00">2023-10-01</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Charlotte</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"></div><div id="rightside-config-show"><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
